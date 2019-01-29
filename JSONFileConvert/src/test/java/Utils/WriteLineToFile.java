@@ -8,9 +8,9 @@ import java.io.PrintWriter;
 public class WriteLineToFile {
 	PrintWriter printWriter;
 	
-	public PrintWriter createfile(String filename){
+	public PrintWriter createfile(String filename,String extenstion){
 		try {
-			 String path= "OutputFiles/".concat(filename).concat(".txt");
+			 String path= "OutputFiles/".concat(filename).concat(extenstion);
 			File file = new File(path);
 			FileWriter fileWriter = new FileWriter(file);
 			PrintWriter printWriter = new PrintWriter(fileWriter);
